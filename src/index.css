@@ -1,0 +1,435 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant sepia (&:where(.sepia, .sepia *));
+
+/* Tailwind v4 Theme - migrated from Lovable Tailwind v3 config */
+@theme {
+  /* Fonts */
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-arabic: "Amiri", serif;
+
+  /* Breakpoints */
+  --breakpoint-2xl: 1400px;
+
+  /* Colors */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-emerald-glow: var(--emerald-glow);
+  --color-gold-shimmer: var(--gold-shimmer);
+  --color-cream-soft: var(--cream-soft);
+  --color-verse-highlight: var(--verse-highlight);
+
+  --color-sidebar: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px color-mix(in srgb, var(--primary) 15%, transparent);
+  --shadow-glow-lg: 0 0 40px color-mix(in srgb, var(--primary) 20%, transparent);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-fade-in-up: fade-in-up 0.5s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+  --animate-shimmer: shimmer 2s infinite linear;
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+/* Al-Qur'an Design System - Peaceful, Premium, Modern Islamic */
+
+:root {
+  /* Light Theme - Warm Cream */
+  --background: hsl(40 33% 98%);
+  --foreground: hsl(160 30% 15%);
+
+  --card: hsl(40 30% 99%);
+  --card-foreground: hsl(160 30% 15%);
+
+  --popover: hsl(40 30% 99%);
+  --popover-foreground: hsl(160 30% 15%);
+
+  /* Emerald Primary - Islamic Green */
+  --primary: hsl(158 64% 30%);
+  --primary-foreground: hsl(40 33% 98%);
+
+  /* Gold Accent */
+  --secondary: hsl(38 75% 55%);
+  --secondary-foreground: hsl(160 30% 15%);
+
+  --muted: hsl(40 20% 94%);
+  --muted-foreground: hsl(160 10% 45%);
+
+  --accent: hsl(38 70% 92%);
+  --accent-foreground: hsl(38 75% 35%);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(40 33% 98%);
+
+  --border: hsl(40 20% 88%);
+  --input: hsl(40 20% 88%);
+  --ring: hsl(158 64% 30%);
+
+  --radius: 1rem;
+
+  /* Custom Quran Variables */
+  --emerald-glow: hsl(158 64% 40%);
+  --gold-shimmer: hsl(38 80% 60%);
+  --cream-soft: hsl(40 40% 96%);
+  --verse-highlight: hsl(158 50% 95%);
+
+  /* Glassmorphism */
+  --glass-bg: hsl(40 30% 99% / 0.7);
+  --glass-border: hsl(40 20% 90% / 0.5);
+
+  /* Arabic Text */
+  --arabic-size: 2rem;
+
+  --sidebar-background: hsl(40 30% 97%);
+  --sidebar-foreground: hsl(160 30% 15%);
+  --sidebar-primary: hsl(158 64% 30%);
+  --sidebar-primary-foreground: hsl(40 33% 98%);
+  --sidebar-accent: hsl(40 20% 94%);
+  --sidebar-accent-foreground: hsl(160 30% 15%);
+  --sidebar-border: hsl(40 20% 88%);
+  --sidebar-ring: hsl(158 64% 30%);
+}
+
+.dark {
+  /* Dark Theme - Deep Night with Better Contrast */
+  --background: hsl(220 20% 10%);
+  --foreground: hsl(40 20% 95%);
+
+  --card: hsl(220 18% 14%);
+  --card-foreground: hsl(40 20% 95%);
+
+  --popover: hsl(220 18% 14%);
+  --popover-foreground: hsl(40 20% 95%);
+
+  --primary: hsl(158 60% 50%);
+  --primary-foreground: hsl(220 20% 8%);
+
+  --secondary: hsl(38 75% 55%);
+  --secondary-foreground: hsl(220 20% 8%);
+
+  --muted: hsl(220 15% 20%);
+  --muted-foreground: hsl(220 10% 65%);
+
+  --accent: hsl(158 45% 22%);
+  --accent-foreground: hsl(158 60% 70%);
+
+  --destructive: hsl(0 70% 55%);
+  --destructive-foreground: hsl(40 20% 95%);
+
+  --border: hsl(220 15% 22%);
+  --input: hsl(220 15% 22%);
+  --ring: hsl(158 60% 50%);
+
+  --emerald-glow: hsl(158 60% 55%);
+  --gold-shimmer: hsl(38 80% 60%);
+  --cream-soft: hsl(220 15% 18%);
+  --verse-highlight: hsl(158 50% 18%);
+
+  --glass-bg: hsl(220 18% 14% / 0.85);
+  --glass-border: hsl(220 15% 28% / 0.5);
+
+  --sidebar-background: hsl(220 18% 12%);
+  --sidebar-foreground: hsl(40 20% 95%);
+  --sidebar-primary: hsl(158 60% 50%);
+  --sidebar-primary-foreground: hsl(220 20% 8%);
+  --sidebar-accent: hsl(220 15% 20%);
+  --sidebar-accent-foreground: hsl(40 20% 95%);
+  --sidebar-border: hsl(220 15% 22%);
+  --sidebar-ring: hsl(158 60% 50%);
+}
+
+.sepia {
+  /* Sepia Theme - Warm Parchment for Comfortable Reading */
+  --background: hsl(38 35% 88%);
+  --foreground: hsl(30 40% 18%);
+
+  --card: hsl(38 40% 92%);
+  --card-foreground: hsl(30 40% 18%);
+
+  --popover: hsl(38 40% 92%);
+  --popover-foreground: hsl(30 40% 18%);
+
+  --primary: hsl(158 55% 32%);
+  --primary-foreground: hsl(38 35% 95%);
+
+  --secondary: hsl(30 65% 45%);
+  --secondary-foreground: hsl(38 35% 95%);
+
+  --muted: hsl(38 30% 82%);
+  --muted-foreground: hsl(30 25% 40%);
+
+  --accent: hsl(38 45% 85%);
+  --accent-foreground: hsl(30 40% 22%);
+
+  --destructive: hsl(0 70% 50%);
+  --destructive-foreground: hsl(38 35% 95%);
+
+  --border: hsl(38 28% 78%);
+  --input: hsl(38 28% 78%);
+  --ring: hsl(158 55% 32%);
+
+  --emerald-glow: hsl(158 50% 38%);
+  --gold-shimmer: hsl(30 70% 50%);
+  --cream-soft: hsl(38 35% 86%);
+  --verse-highlight: hsl(38 40% 85%);
+
+  --glass-bg: hsl(38 40% 92% / 0.85);
+  --glass-border: hsl(38 28% 80% / 0.6);
+
+  --sidebar-background: hsl(38 35% 86%);
+  --sidebar-foreground: hsl(30 40% 18%);
+  --sidebar-primary: hsl(158 55% 32%);
+  --sidebar-primary-foreground: hsl(38 35% 95%);
+  --sidebar-accent: hsl(38 30% 82%);
+  --sidebar-accent-foreground: hsl(30 40% 18%);
+  --sidebar-border: hsl(38 28% 78%);
+  --sidebar-ring: hsl(158 55% 32%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    overflow-x: hidden;
+  }
+
+  .font-arabic {
+    font-family: "Amiri", serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/70 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--emerald-glow));
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, var(--secondary), var(--gold-shimmer));
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--emerald-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--secondary), var(--gold-shimmer));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .verse-card {
+    @apply relative p-6 rounded-2xl bg-card border border-border/30 transition-all duration-300;
+  }
+
+  .verse-card:hover {
+    @apply shadow-md border-primary/20;
+  }
+
+  .surah-card {
+    @apply relative p-4 rounded-xl bg-card border border-border/30 transition-all duration-300 cursor-pointer;
+  }
+
+  .surah-card:hover {
+    @apply shadow-lg border-primary/30 -translate-y-1;
+  }
+
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23166534' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+  }
+
+  .skeleton-shimmer {
+    @apply animate-pulse bg-muted rounded;
+  }
+}
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@layer utilities {
+  .arabic-text {
+    font-family: "Amiri", serif;
+    font-size: var(--arabic-size);
+    line-height: 2.2;
+    direction: rtl;
+    text-align: right;
+  }
+
+  .arabic-sm {
+    --arabic-size: 1.5rem;
+  }
+
+  .arabic-md {
+    --arabic-size: 2rem;
+  }
+
+  .arabic-lg {
+    --arabic-size: 2.5rem;
+  }
+
+  .arabic-xl {
+    --arabic-size: 3rem;
+  }
+}
+
+/* Keyframes migrated from Lovable tailwind.config.ts */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
