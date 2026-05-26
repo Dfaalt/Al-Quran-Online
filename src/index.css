@@ -77,162 +77,161 @@
   --animate-float: float 3s ease-in-out infinite;
 }
 
-/* Al-Qur'an Design System - Peaceful, Premium, Modern Islamic */
-
-:root {
-  /* Light Theme - Warm Cream */
-  --background: hsl(40 33% 98%);
-  --foreground: hsl(160 30% 15%);
-
-  --card: hsl(40 30% 99%);
-  --card-foreground: hsl(160 30% 15%);
-
-  --popover: hsl(40 30% 99%);
-  --popover-foreground: hsl(160 30% 15%);
-
-  /* Emerald Primary - Islamic Green */
-  --primary: hsl(158 64% 30%);
-  --primary-foreground: hsl(40 33% 98%);
-
-  /* Gold Accent */
-  --secondary: hsl(38 75% 55%);
-  --secondary-foreground: hsl(160 30% 15%);
-
-  --muted: hsl(40 20% 94%);
-  --muted-foreground: hsl(160 10% 45%);
-
-  --accent: hsl(38 70% 92%);
-  --accent-foreground: hsl(38 75% 35%);
-
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(40 33% 98%);
-
-  --border: hsl(40 20% 88%);
-  --input: hsl(40 20% 88%);
-  --ring: hsl(158 64% 30%);
-
-  --radius: 1rem;
-
-  /* Custom Quran Variables */
-  --emerald-glow: hsl(158 64% 40%);
-  --gold-shimmer: hsl(38 80% 60%);
-  --cream-soft: hsl(40 40% 96%);
-  --verse-highlight: hsl(158 50% 95%);
-
-  /* Glassmorphism */
-  --glass-bg: hsl(40 30% 99% / 0.7);
-  --glass-border: hsl(40 20% 90% / 0.5);
-
-  /* Arabic Text */
-  --arabic-size: 2rem;
-
-  --sidebar-background: hsl(40 30% 97%);
-  --sidebar-foreground: hsl(160 30% 15%);
-  --sidebar-primary: hsl(158 64% 30%);
-  --sidebar-primary-foreground: hsl(40 33% 98%);
-  --sidebar-accent: hsl(40 20% 94%);
-  --sidebar-accent-foreground: hsl(160 30% 15%);
-  --sidebar-border: hsl(40 20% 88%);
-  --sidebar-ring: hsl(158 64% 30%);
-}
-
-.dark {
-  /* Dark Theme - Deep Night with Better Contrast */
-  --background: hsl(220 20% 10%);
-  --foreground: hsl(40 20% 95%);
-
-  --card: hsl(220 18% 14%);
-  --card-foreground: hsl(40 20% 95%);
-
-  --popover: hsl(220 18% 14%);
-  --popover-foreground: hsl(40 20% 95%);
-
-  --primary: hsl(158 60% 50%);
-  --primary-foreground: hsl(220 20% 8%);
-
-  --secondary: hsl(38 75% 55%);
-  --secondary-foreground: hsl(220 20% 8%);
-
-  --muted: hsl(220 15% 20%);
-  --muted-foreground: hsl(220 10% 65%);
-
-  --accent: hsl(158 45% 22%);
-  --accent-foreground: hsl(158 60% 70%);
-
-  --destructive: hsl(0 70% 55%);
-  --destructive-foreground: hsl(40 20% 95%);
-
-  --border: hsl(220 15% 22%);
-  --input: hsl(220 15% 22%);
-  --ring: hsl(158 60% 50%);
-
-  --emerald-glow: hsl(158 60% 55%);
-  --gold-shimmer: hsl(38 80% 60%);
-  --cream-soft: hsl(220 15% 18%);
-  --verse-highlight: hsl(158 50% 18%);
-
-  --glass-bg: hsl(220 18% 14% / 0.85);
-  --glass-border: hsl(220 15% 28% / 0.5);
-
-  --sidebar-background: hsl(220 18% 12%);
-  --sidebar-foreground: hsl(40 20% 95%);
-  --sidebar-primary: hsl(158 60% 50%);
-  --sidebar-primary-foreground: hsl(220 20% 8%);
-  --sidebar-accent: hsl(220 15% 20%);
-  --sidebar-accent-foreground: hsl(40 20% 95%);
-  --sidebar-border: hsl(220 15% 22%);
-  --sidebar-ring: hsl(158 60% 50%);
-}
-
-.sepia {
-  /* Sepia Theme - Warm Parchment for Comfortable Reading */
-  --background: hsl(38 35% 88%);
-  --foreground: hsl(30 40% 18%);
-
-  --card: hsl(38 40% 92%);
-  --card-foreground: hsl(30 40% 18%);
-
-  --popover: hsl(38 40% 92%);
-  --popover-foreground: hsl(30 40% 18%);
-
-  --primary: hsl(158 55% 32%);
-  --primary-foreground: hsl(38 35% 95%);
-
-  --secondary: hsl(30 65% 45%);
-  --secondary-foreground: hsl(38 35% 95%);
-
-  --muted: hsl(38 30% 82%);
-  --muted-foreground: hsl(30 25% 40%);
-
-  --accent: hsl(38 45% 85%);
-  --accent-foreground: hsl(30 40% 22%);
-
-  --destructive: hsl(0 70% 50%);
-  --destructive-foreground: hsl(38 35% 95%);
-
-  --border: hsl(38 28% 78%);
-  --input: hsl(38 28% 78%);
-  --ring: hsl(158 55% 32%);
-
-  --emerald-glow: hsl(158 50% 38%);
-  --gold-shimmer: hsl(30 70% 50%);
-  --cream-soft: hsl(38 35% 86%);
-  --verse-highlight: hsl(38 40% 85%);
-
-  --glass-bg: hsl(38 40% 92% / 0.85);
-  --glass-border: hsl(38 28% 80% / 0.6);
-
-  --sidebar-background: hsl(38 35% 86%);
-  --sidebar-foreground: hsl(30 40% 18%);
-  --sidebar-primary: hsl(158 55% 32%);
-  --sidebar-primary-foreground: hsl(38 35% 95%);
-  --sidebar-accent: hsl(38 30% 82%);
-  --sidebar-accent-foreground: hsl(30 40% 18%);
-  --sidebar-border: hsl(38 28% 78%);
-  --sidebar-ring: hsl(158 55% 32%);
-}
-
 @layer base {
+  /* Al-Qur'an Design System - Peaceful, Premium, Modern Islamic */
+  :root {
+    /* Light Theme - Warm Cream */
+    --background: hsl(40 33% 98%);
+    --foreground: hsl(160 30% 15%);
+
+    --card: hsl(40 30% 99%);
+    --card-foreground: hsl(160 30% 15%);
+
+    --popover: hsl(40 30% 99%);
+    --popover-foreground: hsl(160 30% 15%);
+
+    /* Emerald Primary - Islamic Green */
+    --primary: hsl(158 64% 30%);
+    --primary-foreground: hsl(40 33% 98%);
+
+    /* Gold Accent */
+    --secondary: hsl(38 75% 55%);
+    --secondary-foreground: hsl(160 30% 15%);
+
+    --muted: hsl(40 20% 94%);
+    --muted-foreground: hsl(160 10% 45%);
+
+    --accent: hsl(38 70% 92%);
+    --accent-foreground: hsl(38 75% 35%);
+
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(40 33% 98%);
+
+    --border: hsl(40 20% 88%);
+    --input: hsl(40 20% 88%);
+    --ring: hsl(158 64% 30%);
+
+    --radius: 1rem;
+
+    /* Custom Quran Variables */
+    --emerald-glow: hsl(158 64% 40%);
+    --gold-shimmer: hsl(38 80% 60%);
+    --cream-soft: hsl(40 40% 96%);
+    --verse-highlight: hsl(158 50% 95%);
+
+    /* Glassmorphism */
+    --glass-bg: hsl(40 30% 99% / 0.7);
+    --glass-border: hsl(40 20% 90% / 0.5);
+
+    /* Arabic Text */
+    --arabic-size: 2rem;
+
+    --sidebar-background: hsl(40 30% 97%);
+    --sidebar-foreground: hsl(160 30% 15%);
+    --sidebar-primary: hsl(158 64% 30%);
+    --sidebar-primary-foreground: hsl(40 33% 98%);
+    --sidebar-accent: hsl(40 20% 94%);
+    --sidebar-accent-foreground: hsl(160 30% 15%);
+    --sidebar-border: hsl(40 20% 88%);
+    --sidebar-ring: hsl(158 64% 30%);
+  }
+
+  .dark {
+    /* Dark Theme - Deep Night with Better Contrast */
+    --background: hsl(220 20% 10%);
+    --foreground: hsl(40 20% 95%);
+
+    --card: hsl(220 18% 14%);
+    --card-foreground: hsl(40 20% 95%);
+
+    --popover: hsl(220 18% 14%);
+    --popover-foreground: hsl(40 20% 95%);
+
+    --primary: hsl(158 60% 50%);
+    --primary-foreground: hsl(220 20% 8%);
+
+    --secondary: hsl(38 75% 55%);
+    --secondary-foreground: hsl(220 20% 8%);
+
+    --muted: hsl(220 15% 20%);
+    --muted-foreground: hsl(220 10% 65%);
+
+    --accent: hsl(158 45% 22%);
+    --accent-foreground: hsl(158 60% 70%);
+
+    --destructive: hsl(0 70% 55%);
+    --destructive-foreground: hsl(40 20% 95%);
+
+    --border: hsl(220 15% 22%);
+    --input: hsl(220 15% 22%);
+    --ring: hsl(158 60% 50%);
+
+    --emerald-glow: hsl(158 60% 55%);
+    --gold-shimmer: hsl(38 80% 60%);
+    --cream-soft: hsl(220 15% 18%);
+    --verse-highlight: hsl(158 50% 18%);
+
+    --glass-bg: hsl(220 18% 14% / 0.85);
+    --glass-border: hsl(220 15% 28% / 0.5);
+
+    --sidebar-background: hsl(220 18% 12%);
+    --sidebar-foreground: hsl(40 20% 95%);
+    --sidebar-primary: hsl(158 60% 50%);
+    --sidebar-primary-foreground: hsl(220 20% 8%);
+    --sidebar-accent: hsl(220 15% 20%);
+    --sidebar-accent-foreground: hsl(40 20% 95%);
+    --sidebar-border: hsl(220 15% 22%);
+    --sidebar-ring: hsl(158 60% 50%);
+  }
+
+  .sepia {
+    /* Sepia Theme - Warm Parchment for Comfortable Reading */
+    --background: hsl(38 35% 88%);
+    --foreground: hsl(30 40% 18%);
+
+    --card: hsl(38 40% 92%);
+    --card-foreground: hsl(30 40% 18%);
+
+    --popover: hsl(38 40% 92%);
+    --popover-foreground: hsl(30 40% 18%);
+
+    --primary: hsl(158 55% 32%);
+    --primary-foreground: hsl(38 35% 95%);
+
+    --secondary: hsl(30 65% 45%);
+    --secondary-foreground: hsl(38 35% 95%);
+
+    --muted: hsl(38 30% 82%);
+    --muted-foreground: hsl(30 25% 40%);
+
+    --accent: hsl(38 45% 85%);
+    --accent-foreground: hsl(30 40% 22%);
+
+    --destructive: hsl(0 70% 50%);
+    --destructive-foreground: hsl(38 35% 95%);
+
+    --border: hsl(38 28% 78%);
+    --input: hsl(38 28% 78%);
+    --ring: hsl(158 55% 32%);
+
+    --emerald-glow: hsl(158 50% 38%);
+    --gold-shimmer: hsl(30 70% 50%);
+    --cream-soft: hsl(38 35% 86%);
+    --verse-highlight: hsl(38 40% 85%);
+
+    --glass-bg: hsl(38 40% 92% / 0.85);
+    --glass-border: hsl(38 28% 80% / 0.6);
+
+    --sidebar-background: hsl(38 35% 86%);
+    --sidebar-foreground: hsl(30 40% 18%);
+    --sidebar-primary: hsl(158 55% 32%);
+    --sidebar-primary-foreground: hsl(38 35% 95%);
+    --sidebar-accent: hsl(38 30% 82%);
+    --sidebar-accent-foreground: hsl(30 40% 18%);
+    --sidebar-border: hsl(38 28% 78%);
+    --sidebar-ring: hsl(158 55% 32%);
+  }
+
   * {
     @apply border-border;
   }
